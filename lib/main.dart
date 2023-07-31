@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jisho/src/utils/my_colors.dart';
 import 'package:jisho/src/views/authentication_page.dart';
 import 'package:jisho/src/views/home_page.dart';
+import 'package:jisho/src/widgets/elevated_card.dart';
 
 void main() {
   runApp(const MyApp());
