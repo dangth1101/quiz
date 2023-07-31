@@ -22,19 +22,18 @@ class _MyBarGraphState extends State<MyBarGraph> {
         minY: 0,
         maxY: 20,
         barTouchData: barTouchData,
-        gridData: FlGridData(show: false),
+        gridData: const FlGridData(show: false),
         borderData: FlBorderData(
           show: true,
-          border: Border(
-            
+          border: const Border(
             bottom: BorderSide(),
           ),
         ),
         titlesData: FlTitlesData(
           show: true,
-          leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
           bottomTitles: AxisTitles(
             sideTitles: SideTitles(
               showTitles: true,
@@ -64,20 +63,19 @@ class _MyBarGraphState extends State<MyBarGraph> {
   }
 
   BarTouchData get barTouchData => BarTouchData(
-    enabled: true,
-    touchTooltipData: BarTouchTooltipData(
-        
-        tooltipBgColor: Colors.transparent,
-        tooltipPadding: const EdgeInsets.all(-16),
-        tooltipMargin: -4,
-        getTooltipItem: (group, groupIndex, rod, rodIndex) {
+        enabled: true,
+        touchTooltipData: BarTouchTooltipData(
+          tooltipBgColor: Colors.transparent,
+          tooltipPadding: const EdgeInsets.all(-16),
+          tooltipMargin: -4,
+          getTooltipItem: (group, groupIndex, rod, rodIndex) {
             return BarTooltipItem(
-                rod.toY.round().toString(),
-                TextStyle(color: MyColors.fontColor, fontWeight: FontWeight.bold),
+              rod.toY.round().toString(),
+              const TextStyle(color: MyColors.fontColor, fontWeight: FontWeight.bold),
             );
-        },
-    ),
-  );
+          },
+        ),
+      );
 
   Widget getTitles(double value, TitleMeta meta) {
     const style = TextStyle(

@@ -1,5 +1,5 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:jisho/src/utils/my_colors.dart';
 import 'package:jisho/src/widgets/bar_graph.dart';
 import 'package:jisho/src/widgets/elevated_card.dart';
@@ -24,37 +24,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.white,
-        leading: Center(
-            child: CircleAvatar(backgroundColor: MyColors.backgroundColor)),
-        title: TextField(
-          decoration: InputDecoration(
-            fillColor: MyColors.backgroundColor,
-            filled: true,
-            hintText: "Search",
-            prefixIcon: Icon(Icons.search),
-            border: InputBorder.none,
-          ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.qr_code,
-              color: MyColors.buttonColor,
-            ),
-          ),
-        ],
-      ),
-      body: SingleChildScrollView(
+    return SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 height: 160.0, // Provide a specific height
                 child: PageView.builder(
                   controller: PageController(viewportFraction: 0.8),
@@ -63,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       color: MyColors.backgroundColor,
-                      margin: EdgeInsets.all(8.0),
+                      margin: const EdgeInsets.all(8.0),
                       child: Center(child: Text('Item $index')),
                     );
                   },
@@ -73,15 +48,15 @@ class _HomePageState extends State<HomePage> {
                 dotsCount: 5,
                 position: 1,
                 decorator: DotsDecorator(
-                  size: Size.square(8.0),
-                  activeSize: Size(16.0, 8.0),
+                  size: const Size.square(8.0),
+                  activeSize: const Size(16.0, 8.0),
                   activeShape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0)),
                   color: MyColors.backgroundColor,
                   activeColor: MyColors.buttonColor,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -90,16 +65,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(
-                height: 200,
+                height: 190,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return ElevatedCard();
+                    return const ElevatedCard();
                   },
                   itemCount: 10,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -120,8 +95,8 @@ class _HomePageState extends State<HomePage> {
                             width: 15,
                             color: MyColors.buttonColor,
                           ),
-                          VerticalDivider(),
-                          Text("Time/Day"),
+                          const VerticalDivider(),
+                          const Text("Time/Day"),
                         ],
                       ),
                     ),
@@ -142,24 +117,6 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Collection',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorite',
-          ),
-        ],
-        selectedItemColor: MyColors.buttonColor,
-      ),
-    );
+      );
   }
 }

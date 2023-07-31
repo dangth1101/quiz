@@ -22,7 +22,7 @@ class AuthenticationPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16.0),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: TextField(
                 decoration: InputDecoration(
@@ -35,7 +35,7 @@ class AuthenticationPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16.0),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: TextField(
                 obscureText: true,
@@ -53,9 +53,9 @@ class AuthenticationPage extends StatelessWidget {
             const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {},
-              child: Text('LOGIN'),
+              child: const Text('LOGIN'),
             ),
-            Divider(
+            const Divider(
               indent: 40.0,
               endIndent: 40.0,
             ),
