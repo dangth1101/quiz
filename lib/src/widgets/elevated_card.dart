@@ -14,13 +14,14 @@ class _ElevatedCardState extends State<ElevatedCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: MyColors.backgroundColor,
+      color: MyColors.primaryColor,
       child: InkWell(
         onTap: () {
           _style = !_style;
           setState(() {});
         },
         child: SizedBox(
+          height: 190,
           width: 160,
           child: Column(
             children: [
@@ -75,11 +76,11 @@ class _ElevatedCardState extends State<ElevatedCard> {
                           Container(
                             height: 30,
                             width: 30,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: Colors.green,
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Icon(
                                 Icons.play_arrow,
                                 color: Colors.white,
@@ -89,11 +90,11 @@ class _ElevatedCardState extends State<ElevatedCard> {
                           Container(
                             height: 30,
                             width: 30,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: Colors.orangeAccent,
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Icon(
                                 Icons.edit,
                                 color: Colors.white,
@@ -103,11 +104,11 @@ class _ElevatedCardState extends State<ElevatedCard> {
                           Container(
                             height: 30,
                             width: 30,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: Colors.red,
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Icon(
                                 Icons.delete,
                                 color: Colors.white,

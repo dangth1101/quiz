@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jisho/src/utils/my_colors.dart';
-import 'package:jisho/src/views/outline_page.dart';
+import 'package:jisho/src/views/dashboard/home_page.dart';
+import 'package:jisho/src/views/dashboard/outline_page.dart';
+
 
 void main() {
   runApp(const MyApp());

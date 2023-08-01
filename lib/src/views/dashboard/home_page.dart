@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                   itemCount: 10,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
-                      color: MyColors.backgroundColor,
+                      color: MyColors.primaryColor,
                       margin: const EdgeInsets.all(8.0),
                       child: Center(child: Text('Item $index')),
                     );
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                   activeSize: const Size(16.0, 8.0),
                   activeShape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0)),
-                  color: MyColors.backgroundColor,
+                  color: MyColors.primaryColor,
                   activeColor: MyColors.buttonColor,
                 ),
               ),
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
               Column(
                 children: [
                   Container(
-                    color: MyColors.backgroundColor,
+                    color: MyColors.primaryColor,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 8.0, top: 4.0),
                       child: Row(
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     height: 160,
-                    color: MyColors.backgroundColor,
+                    color: MyColors.primaryColor,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 20),
                       child: MyBarGraph(

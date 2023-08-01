@@ -12,7 +12,7 @@ class FavoritePage extends StatefulWidget {
 class _FavoritePageState extends State<FavoritePage> {
   @override
   Widget build(BuildContext context) {
-    return StaggeredGrid.count(crossAxisCount: 2, children: [
+    return StaggeredGrid.count(crossAxisCount: 2, children: const [
       ElevatedCard(),
       ElevatedCard(),
       ElevatedCard(),

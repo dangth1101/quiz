@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:jisho/src/utils/my_colors.dart';
-import 'package:jisho/src/views/collection_page.dart';
-import 'package:jisho/src/views/favorite_page.dart';
-import 'package:jisho/src/views/home_page.dart';
+import 'package:jisho/src/views/dashboard/collection_page.dart';
+import 'package:jisho/src/views/dashboard/favorite_page.dart';
+import 'package:jisho/src/views/dashboard/home_page.dart';
 
 class OutlinePage extends StatefulWidget {
   const OutlinePage({super.key});
@@ -23,10 +23,10 @@ class _OutlinePageState extends State<OutlinePage> {
         backgroundColor: Colors.white,
         foregroundColor: Colors.white,
         leading: const Center(
-            child: CircleAvatar(backgroundColor: MyColors.backgroundColor)),
+            child: CircleAvatar(backgroundColor: MyColors.primaryColor)),
         title: const TextField(
           decoration: InputDecoration(
-            fillColor: MyColors.backgroundColor,
+            fillColor: MyColors.primaryColor,
             filled: true,
             hintText: "Search",
             prefixIcon: Icon(Icons.search),
@@ -43,7 +43,7 @@ class _OutlinePageState extends State<OutlinePage> {
           ),
         ],
       ),
-      body: HomePage(),
+      body: FavoritePage(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -34,7 +34,7 @@ class _CollectionPageState extends State<CollectionPage> {
                                 .copyWith(fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Expanded(
+                        const Expanded(
                           flex: 3,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -59,7 +59,7 @@ class _CollectionPageState extends State<CollectionPage> {
                     controlAffinity: ListTileControlAffinity.leading,
                     children: [
                       ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
                           return Row(
@@ -75,7 +75,7 @@ class _CollectionPageState extends State<CollectionPage> {
                                       .copyWith(fontWeight: FontWeight.bold),
                                 ),
                               ),
-                              Expanded(
+                              const Expanded(
                                 flex: 3,
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,7 +103,7 @@ class _CollectionPageState extends State<CollectionPage> {
                     ],
                   ),
                 ),
-                Divider(thickness: 1,),
+                const Divider(thickness: 1,),
               ],
             );
           },
@@ -115,7 +115,7 @@ class _CollectionPageState extends State<CollectionPage> {
             padding: const EdgeInsets.all(16.0),
             child: FloatingActionButton(
               onPressed: () {},
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: MyColors.fontColor,
               ),
